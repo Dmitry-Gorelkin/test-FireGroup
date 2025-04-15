@@ -1,0 +1,11 @@
+import styled from 'styled-components';
+
+export const HeaderBackgroundColor = styled.div`
+  background-color: ${p => p.theme.colors.backgroundSecondary};
+`;
+
+export const HeaderContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+`;

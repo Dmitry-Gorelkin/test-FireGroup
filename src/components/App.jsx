@@ -1,7 +1,12 @@
+import Header from './Header/Header';
+import MainLayout from './MainLayout/MainLayout';
+import PostNone from './PostNone/PostNone';
+
 function App() {
   return (
     <>
-      <h1>Hello World</h1>
+      <Header />
+      <MainLayout />
     </>
   );
 }
