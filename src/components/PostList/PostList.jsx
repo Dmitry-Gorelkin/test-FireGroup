@@ -2,6 +2,7 @@ import PostItem from '../PostItem/PostItem';
 import { useEffect, useState } from 'react';
 
 import testPost from '../../data';
+import { Section } from '../UI/Section/Section.styled';
 
 const PostList = () => {
   const [posts, setPosts] = useState(testPost);
@@ -11,11 +12,13 @@ const PostList = () => {
   }, []);
 
   return (
-    <ul>
-      {posts.map(e => (
-        <PostItem key={e.id} post={e} />
-      ))}
-    </ul>
+    <Section>
+      <ul>
+        {posts.map(e => (
+          <PostItem key={e.id} post={e} />
+        ))}
+      </ul>
+    </Section>
   );
 };
 
