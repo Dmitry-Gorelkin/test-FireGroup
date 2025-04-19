@@ -32,6 +32,47 @@ export const PostItemTitle = styled.h3`
   text-transform: uppercase;
 `;
 
+export const PostItemContainerImg = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  gap: 15px;
+
+  @media screen and (min-width: 425px) {
+    gap: 20px;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: row-reverse;
+
+    gap: 25px;
+  }
+
+  @media screen and (min-width: 1440px) {
+  }
+`;
+
+export const PostItemImg = styled.img`
+  display: block;
+  width: 100%;
+
+  object-fit: cover;
+
+  @media screen and (min-width: 425px) {
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 200px;
+    height: 200px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 400px;
+    height: 400px;
+  }
+`;
+
 export const PostItemTime = styled.div`
   display: flex;
   justify-content: end;

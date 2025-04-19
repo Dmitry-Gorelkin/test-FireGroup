@@ -3,7 +3,7 @@ import * as Yup from 'yup';
 import { nanoid } from 'nanoid';
 import useAppStore from '../../store/useAppStore';
 import { selectAddPost } from '../../store/selectors';
-// import initDB from '../../services/db';
+import initDB from '../../services/db';
 
 const MAX_TITLE_LENGTH = 100;
 const MAX_BODY_LENGTH = 1000;
@@ -23,21 +23,21 @@ const validationSchema = Yup.object({
     }),
 });
 
-// const saveImag = async (file, id) => {
-//   const db = await initDB();
-//   const tx = db.transaction('images', 'readwrite');
-//   const store = tx.objectStore('images');
-
-//   await store.add({
-//     id,
-//     file,
-//   });
-
-//   await tx.done;
-// };
-
 const NewPostForm = ({ closeModal }) => {
   const addPost = useAppStore(selectAddPost);
+
+  const saveImag = async (file, id) => {
+    const db = await initDB();
+    const tx = db.transaction('images', 'readwrite');
+    const store = tx.objectStore('images');
+
+    await store.add({
+      id,
+      file,
+    });
+
+    await tx.done;
+  };
 
   return (
     <Formik
@@ -52,10 +52,11 @@ const NewPostForm = ({ closeModal }) => {
           id: nanoid(),
           title: values.title,
           content: values.body,
-          createdAt: new Date(),
+          createdAt: Date.now(),
         };
 
         addPost(post);
+        saveImag(values.file, post.id);
         closeModal();
       }}
     >

@@ -1,4 +1,3 @@
-// db.js
 import { openDB } from 'idb';
 
 export const initDB = async () => {

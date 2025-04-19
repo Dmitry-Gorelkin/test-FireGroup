@@ -17,3 +17,12 @@ export const theme = Object.freeze({
     accent: '#2196F3', // Цвет акцента для выделения: яркий голубой для привлечения внимания к важным элементам
   },
 });
+
+// @media screen and (min-width: 425px) {
+// }
+
+// @media screen and (min-width: 768px) {
+// }
+
+// @media screen and (min-width: 1440px) {
+// }
