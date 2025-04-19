@@ -12,8 +12,8 @@ export const HeaderContainer = styled.div`
 `;
 
 export const HeaderMobIcon = styled(BiCommentAdd)`
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
 
   fill: ${p => p.theme.colors.btn};
 
