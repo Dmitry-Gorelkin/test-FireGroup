@@ -12,7 +12,7 @@ const testPost = [
   {
     id: 1744745273282,
     title: 'Tiny Tech, Big Impact',
-    text: 'Small devices, huge power. Pocket tech is reshaping how we live and work every day.',
+    text: 'Small devices, huge power. Pocket tech is reshaping how we live and work every day. Small devices, huge power. Pocket tech is reshaping how we live and work every day. Small devices, huge power. Pocket tech is reshaping how we live and work every day. Small devices, huge power. Pocket tech is reshaping how we live and work every day. Small devices, huge power. Pocket tech is reshaping how we live and work every day. Small devices, huge power. Pocket tech is reshaping how we live and work every day.',
   },
 ];
 

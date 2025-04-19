@@ -1,14 +1,12 @@
-import { RiArticleLine } from 'react-icons/ri';
+import { LogoContainer, LogoText, LogoIcon } from './Logo.styled';
 
 const Logo = () => {
   return (
-    <div>
-      <p>
-        My
-        <RiArticleLine />
-        Post
-      </p>
-    </div>
+    <LogoContainer>
+      <LogoText>My</LogoText>
+      <LogoIcon />
+      <LogoText>Post</LogoText>
+    </LogoContainer>
   );
 };
 

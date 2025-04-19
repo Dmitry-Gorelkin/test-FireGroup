@@ -4,12 +4,17 @@ import NewPostForm from '../NewPostForm/NewPostForm';
 import NewPostModal from '../NewPostModal/NewPostModal';
 import { Container } from '../UI/Conteyner/Conteiner.styled';
 import { Section } from '../UI/Section/Section.styled';
-import { HeaderBackgroundColor, HeaderContainer } from './Header.styled';
-import { BiCommentAdd } from 'react-icons/bi';
+import {
+  HeaderBackgroundColor,
+  HeaderContainer,
+  HeaderMobIcon,
+  HeaderBtnNewPost,
+} from './Header.styled';
 
 const Header = () => {
   const [open, setOpen] = useState(false);
 
+  const openModal = () => setOpen(true);
   const closeModal = () => {
     setOpen(false);
   };
@@ -21,8 +26,10 @@ const Header = () => {
           <Section>
             <HeaderContainer>
               <Logo />
-              <BiCommentAdd />
-              <div onClick={() => setOpen(true)}>New Post</div>
+              <HeaderMobIcon onClick={openModal} />
+              <HeaderBtnNewPost onClick={openModal}>
+                <span>New Post</span>
+              </HeaderBtnNewPost>
             </HeaderContainer>
           </Section>
         </Container>
