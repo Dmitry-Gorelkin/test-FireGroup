@@ -1,12 +1,12 @@
 import { useState } from 'react';
 
 const PostItem = ({ post }) => {
-  const [time, _] = useState(new Date(post.id));
+  const [time, _] = useState(new Date(post.createdAt));
 
   return (
     <li>
       <h3>{post.title}</h3>
-      <p>{post.text}</p>
+      <p>{post.content}</p>
 
       <p>{time.toLocaleString()}</p>
     </li>

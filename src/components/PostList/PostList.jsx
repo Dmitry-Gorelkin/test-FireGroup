@@ -1,15 +1,10 @@
 import PostItem from '../PostItem/PostItem';
-import { useEffect, useState } from 'react';
-
-import testPost from '../../data';
 import { Section } from '../UI/Section/Section.styled';
+import useAppStore from '../../store/useAppStore';
+import { selectPosts } from '../../store/selectors';
 
 const PostList = () => {
-  const [posts, setPosts] = useState(testPost);
-
-  useEffect(() => {
-    setPosts(prev => prev.sort((a, b) => b.id - a.id));
-  }, []);
+  const posts = useAppStore(selectPosts);
 
   return (
     <Section>
