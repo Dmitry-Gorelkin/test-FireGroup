@@ -52,7 +52,7 @@ const NewPostForm = ({ closeModal }) => {
           id: nanoid(),
           title: values.title,
           content: values.body,
-          createdAt: Date.now(),
+          createdAt: new Date(),
         };
 
         addPost(post);
