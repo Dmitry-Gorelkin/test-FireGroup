@@ -6,13 +6,22 @@ import {
   PostItemTime,
   PostItemContainerImg,
   PostItemImg,
+  PostItemIconDelete,
 } from './PostItem.styled';
 import initDB from '../../services/db';
 import { useEffect, useState } from 'react';
+import AppModal from '../AppModal/AppModal';
+import PostItemDelete from '../PostItemDelete/PostItemDelete';
 
 const PostItem = ({ post }) => {
   const formattedDate = format(new Date(post.createdAt), 'yyyy MMMM dd, HH:mm');
   const [imageSrc, setImageSrc] = useState(imageURL);
+
+  const [open, setOpen] = useState(false);
+
+  const closeModal = () => {
+    setOpen(false);
+  };
 
   useEffect(() => {
     const loadImage = async () => {
@@ -44,8 +53,11 @@ const PostItem = ({ post }) => {
         <PostItemImg src={imageSrc} alt="None Image" />
         <p>{post.content}</p>
       </PostItemContainerImg>
-
       <PostItemTime>{formattedDate}</PostItemTime>
+      <PostItemIconDelete onClick={() => setOpen(true)} />
+      <AppModal isOpen={open} closeModal={closeModal}>
+        <PostItemDelete id={post.id} closeModal={closeModal} />
+      </AppModal>
     </PostItemContainer>
   );
 };

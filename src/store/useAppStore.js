@@ -11,6 +11,10 @@ const useAppStore = create(
           state.posts.push(post);
           state.posts.sort((a, b) => b.createdAt - a.createdAt);
         }),
+      delPost: id =>
+        set(state => {
+          state.posts = state.posts.filter(e => e.id !== id);
+        }),
     })),
     {
       name: 'appStore',

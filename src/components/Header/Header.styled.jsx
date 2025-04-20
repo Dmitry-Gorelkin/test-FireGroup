@@ -37,7 +37,7 @@ export const HeaderBtnNewPost = styled.div`
     justify-content: center;
     align-items: center;
 
-    padding: 5px 5px;
+    padding: 5px;
 
     border-radius: 8px;
 
@@ -53,6 +53,6 @@ export const HeaderBtnNewPost = styled.div`
   }
 
   @media screen and (min-width: 1440px) {
-    padding: 10px 10px;
+    padding: 10px;
   }
 `;

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { RiDeleteBin6Line } from 'react-icons/ri';
 
 export const PostItemContainer = styled.li`
   display: flex;
@@ -7,6 +8,8 @@ export const PostItemContainer = styled.li`
   gap: 15px;
 
   padding: 10px;
+
+  position: relative;
 
   box-shadow: 0 0 15px ${p => p.theme.colors.accent};
 
@@ -77,4 +80,42 @@ export const PostItemImg = styled.img`
 export const PostItemTime = styled.div`
   display: flex;
   justify-content: end;
+`;
+
+export const PostItemIconDelete = styled(RiDeleteBin6Line)`
+  width: 30px;
+  height: 30px;
+
+  padding: 5px;
+
+  position: absolute;
+
+  left: 10px;
+  bottom: 10px;
+
+  border: none;
+  border-radius: 8px;
+  background-color: ${p => p.theme.colors.btn};
+
+  fill: ${p => p.theme.colors.textWhite};
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: ${p => p.theme.colors.btnHover};
+  }
+
+  @media screen and (min-width: 425px) {
+  }
+
+  @media screen and (min-width: 768px) {
+    left: 20px;
+    bottom: 20px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    left: 25px;
+    bottom: 25px;
+  }
 `;

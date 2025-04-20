@@ -12,7 +12,6 @@ const customStyles = {
     bottom: 'auto',
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
-    // borderRadius: '16px',
     border: 'none',
     padding: '0px',
     maxWidth: '90vw',
@@ -20,7 +19,7 @@ const customStyles = {
   },
 };
 
-const NewPostModal = ({ isOpen, closeModal, children }) => {
+const AppModal = ({ isOpen, closeModal, children }) => {
   return (
     <Modal
       isOpen={isOpen}
@@ -35,4 +34,4 @@ const NewPostModal = ({ isOpen, closeModal, children }) => {
   );
 };
 
-export default NewPostModal;
+export default AppModal;

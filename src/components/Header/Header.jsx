@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Logo from '../Logo/Logo';
 import NewPostForm from '../NewPostForm/NewPostForm';
-import NewPostModal from '../NewPostModal/NewPostModal';
+import AppModal from '../AppModal/AppModal';
 import { Container } from '../UI/Conteyner/Conteiner.styled';
 import { Section } from '../UI/Section/Section.styled';
 import {
@@ -34,9 +34,9 @@ const Header = () => {
           </Section>
         </Container>
       </HeaderBackgroundColor>
-      <NewPostModal isOpen={open} closeModal={closeModal}>
+      <AppModal isOpen={open} closeModal={closeModal}>
         <NewPostForm closeModal={closeModal} />
-      </NewPostModal>
+      </AppModal>
     </>
   );
 };
