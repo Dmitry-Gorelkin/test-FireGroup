@@ -57,7 +57,7 @@ export const NewPostFormInput = styled.input`
 export const NewPostFormTextArea = styled.textarea`
   display: block;
   width: 100%;
-  height: 15vw;
+  height: 250px;
 
   padding: 10px;
 
@@ -68,6 +68,16 @@ export const NewPostFormTextArea = styled.textarea`
 
   outline: none;
   resize: none;
+
+  @media screen and (min-width: 768px) {
+    height: 400px;
+    padding: 20px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    height: 600px;
+    padding: 25px;
+  }
 `;
 
 export const NewPostErrorMessage = styled.div`
