@@ -88,6 +88,8 @@ export const NewPostFormBtnContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  gap: 20px;
 `;
 
 export const NewPostFormBtn = styled.button`

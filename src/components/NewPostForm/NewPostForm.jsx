@@ -1,4 +1,4 @@
-import { Formik, useFormik } from 'formik';
+import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { nanoid } from 'nanoid';
 import useAppStore from '../../store/useAppStore';
@@ -146,6 +146,7 @@ const NewPostForm = ({ closeModal }) => {
         >
           Submit
         </NewPostFormBtn>
+        <NewPostFormBtn onClick={closeModal}>Close</NewPostFormBtn>
       </NewPostFormBtnContainer>
     </NewPostFormContainer>
   );
