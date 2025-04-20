@@ -1,12 +1,47 @@
-# React + Vite
+# 📝 Тестовое задание: Блог-форма
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📋 Задание
 
-Currently, two official plugins are available:
+Создать небольшую форму, в которую можно вписать:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- название статьи,
+- текст статьи,
+- прикрепить изображение.
 
-## Expanding the ESLint configuration
+Код должен:
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- автоматически подставлять текущую дату,
+- сохранять данные в базу (возможно локально),
+- отображать все статьи в виде списка.
+
+---
+
+## ✅ Что реализовано
+
+- **Адаптивный сайт** с простой формой ввода данных.
+- **Вывод списка постов**, отсортированных по дате создания (от нового к старому).
+- **Функция удаления постов**.
+- Все данные хранятся **локально в браузере** (LocalStorage+indexedDB).
+
+🔗 [Развернутая версия проекта](https://test-fire-group.vercel.app/)
+
+---
+
+## 🛠 Используемые технологии
+
+- **React**
+- **Zustand** — управление состоянием
+- **Styled-components** — стилизация и адаптив
+- **Formik** — обработка форм
+- **Vite** — сборщик
+
+---
+
+## ⚙️ Установка и запуск проекта локально
+
+```bash
+git clone https://github.com/Dmitry-Gorelkin/test-FireGroup.git
+cd test-FireGroup
+npm install
+npm run dev
+```
