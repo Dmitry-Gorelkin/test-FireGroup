@@ -45,6 +45,7 @@ export const PostItemContainerImg = styled.div`
   @media screen and (min-width: 768px) {
     display: flex;
     flex-direction: row-reverse;
+    justify-content: space-between;
 
     gap: 25px;
   }
