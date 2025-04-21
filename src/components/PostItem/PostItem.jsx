@@ -1,5 +1,5 @@
 import { format } from 'date-fns';
-import imageURL from '../../../public/imageNone.jpg';
+import imageURL from '/imageNone.jpg';
 import {
   PostItemContainer,
   PostItemTitle,
