@@ -17,9 +17,8 @@ import {
   NewPostFileIcon,
 } from './NewPostForm.styled';
 
-const MAX_TITLE_LENGTH = 100;
-const MAX_BODY_LENGTH = 1000;
-const MAX_IMAGE_SIZE = 1000 * 1024;
+const MAX_TITLE_LENGTH = 150;
+const MAX_BODY_LENGTH = 1500;
 
 const validationSchema = Yup.object({
   title: Yup.string()
@@ -28,11 +27,7 @@ const validationSchema = Yup.object({
   body: Yup.string()
     .max(MAX_BODY_LENGTH, `Maximum ${MAX_BODY_LENGTH} characters`)
     .required('Required field'),
-  file: Yup.mixed()
-    .required('File is required')
-    .test('fileSize', 'File must be smaller than 1000KB', value => {
-      return value && value.size <= MAX_IMAGE_SIZE;
-    }),
+  file: Yup.mixed().required('File is required'),
 });
 
 const NewPostForm = ({ closeModal }) => {
@@ -114,7 +109,7 @@ const NewPostForm = ({ closeModal }) => {
         <NewPostFileInputContainer load={isFileSelected}>
           <NewPostFileInput
             id="file"
-            name="image"
+            name="file"
             type="file"
             onChange={event => {
               const file = event.currentTarget.files[0];
