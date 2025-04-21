@@ -44,7 +44,7 @@ const PostItem = ({ post }) => {
         URL.revokeObjectURL(imageSrc);
       }
     };
-  }, [imageSrc, post.id]);
+  }, [post.id]);
 
   return (
     <PostItemContainer>
